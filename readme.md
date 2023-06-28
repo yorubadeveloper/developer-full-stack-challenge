@@ -1,5 +1,23 @@
 # DataCose Full Stack Challenge
 
+## How to run FastAPI application
+1. Create a virtual env in the root directory for the FastAPI app
+2. Install requirements in the `src/api` directory `pip install requirements.txt`
+3. Create .env file in root directory with content:
+```
+DATABASE_URL=postgresql://user@localhost/datacosetest
+JWT_SECRET_KEY=mysecretkey
+SECRET_KEY=mysecretkey
+```
+4. Run migrations `alembic upgrade head`
+5. Run seed file in `src/api` directory
+6. Start the FastAPI application `uvicorn src.api.main:app --reload`
+
+## How to run the Nuxt Application
+1. Go into the dashboard directory `cd src/dashboard/`
+2. Install dependencies `npm i`
+3. Start the development application `npm run dev`
+
 The goal of this challenge if to create a Nuxt frontend with a FastAPI backend matching the objectives down below.
 
 To bootstrap this project, we've used a basic [Nuxt 2](https://nuxtjs.org/) and [FastAPI](https://fastapi.tiangolo.com/lo/) template. There is a Dockerfile available in case you want to work with Docker during development, but this is not a requirement.
